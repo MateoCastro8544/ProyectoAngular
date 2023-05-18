@@ -21,11 +21,11 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getProducts();
-    //this.getProduct();
-    //this.createProduct();
-    //this.updateProduct();
-    //this.deleteProduct();
+    // this.getProducts();
+    // this.getProduct();
+    // this.createProduct();
+    // this.updateProduct(30);
+    this.deleteProduct(30);
   }
 
   getProducts() {
@@ -38,7 +38,7 @@ export class ProductComponent implements OnInit {
 
   getProduct() {
     const url = 'http://api.escuelajs.co/api/v1/products/20';
-    this.productHttpService.getOne(2).subscribe
+    this.productHttpService.getOne(20).subscribe
       (response => {
         console.log(response)
       });
@@ -48,7 +48,7 @@ export class ProductComponent implements OnInit {
     const data = {
       title: "Zapatos",
       price: 25,
-      description: "Deportivos / Brandon Caranqui",
+      description: "Deportivos / DAVID CASTRO",
       images: ['https://m.media-amazon.com/images/I/41lL4RYD-PL._SL500_.jpg'],
       categoryId: 1,
     }
@@ -63,7 +63,7 @@ export class ProductComponent implements OnInit {
     const data = {
       title: "Camisetas",
       price: 15,
-      description: "Deportivos / Brandon Caranqui",
+      description: "Deportivos / David Castro",
       images: ['https://m.media-amazon.com/images/I/41lL4RYD-PL._SL500_.jpg'],
       categoryId: 1
     }
